@@ -2,11 +2,13 @@
 
 # 🌍 AI Video Translator (Local)
 
-> **Break language barriers with cinema-quality video translation — privately, on your own hardware.**
+> 🌐 Türkçe sürüm: [README_tr.md](README_tr.md)
+>
+> **Dil bariyerlerini yıkın — sinema kalitesinde video çevirisi, özel olarak kendi donanımınızda.**
 
-Transform any video into a professional multilingual production with natural voice cloning, lip-sync, and on-screen text translation. No cloud APIs, no subscriptions, no data leaving your machine.
+Her videoyu, doğal ses klonlaması, dudak senkronizasyonu ve ekranda metin çevirisiyle profesyonel çok dilli bir üretime dönüştürün. Bulut API'leri yok, abonelik yok, veriniz bilgisayarınızdan ayrılmıyor.
 
-## 📝 Enjoying the project? Please star it ⭐️! It helps me gauge interest and keep working on new features.
+## 📝 Projeden memnun musunuz? Lütfen yıldız verin ⭐️! İlgi seviyesini ölçmeye ve yeni özellikler üzerinde çalışmaya devam etmem için yardımcı oluyor.
 
 ---
 
@@ -14,174 +16,174 @@ Transform any video into a professional multilingual production with natural voi
 
 [![Watch the Demo](https://img.youtube.com/vi/935PvODrt3I/maxresdefault.jpg)](https://www.youtube.com/watch?v=935PvODrt3I)
 
-> 🎥 **Click the image above to watch the full demo on YouTube!**
+> 🎥 **Yukarıdaki görsele tıklayarak YouTube'da tam demosunu izleyebilirsiniz!**
 
 ---
 
-## ✨ Why This Project?
+## ✨ Bu Proje Neden Önemli?
 
-**Traditional dubbing** is expensive, time-consuming, and requires professional studios. **AI Video Translator** democratizes video localization by bringing Hollywood-grade technology to your desktop:
+**Geleneksel dublaj** pahalı, zaman alıcıdır ve profesyonel stüdyolar gerektirir. **AI Video Translator**, Hollywood seviyesindeki teknolojiyi masaüstünüze getirerek video yerelleştirmeyi demokratikleştirir:
 
-- 🎬 **Content Creators**: Expand your audience globally without hiring voice actors
-- 🎓 **Educators**: Make training content accessible in any language
-- 📰 **Journalists & Documentarians**: Localize footage for international audiences
-- 🎮 **Game Developers**: Dub cutscenes and trailers cost-effectively
-- 🏢 **Businesses**: Translate corporate videos, presentations, and webinars
-- 🔒 **Privacy-Focused Users**: Keep sensitive content 100% local
+- 🎬 **İçerik Yaratıcıları**: Ses sanatçısı tutmadan küresel izleyici kitlesini genişletin
+- 🎓 **Eğitimciler**: Eğitim içeriklerini her dilde erişilebilir hale getirin
+- 📰 **Gazeteciler & Belgesel Yapımcıları**: Uluslararası izleyiciler için görüntüleri yerelleştirin
+- 🎮 **Oyun Geliştiricileri**: Kesit sahneleri ve fragmanları uygun maliyetle dublajlayın
+- 🏢 **İşletmeler**: Kurumsal videoları, sunumları ve web seminerlerini çevirin
+- 🔒 **Gizlilik Odaklı Kullanıcılar**: Hassas içerikleri %100 yerelde tutun
 
 ---
 
-## 🎯 What It Does
+## 🎯 Ne Yapıyor?
 
-Upload a video, select your target language, and let the AI handle everything:
+Bir video yükleyin, hedef dili seçin ve AI her şeyi halletsin:
 
 ```
-📹 Input Video (English) → 🤖 AI Pipeline → 📹 Output Video (French, with cloned voice & synced lips)
+📹 Giriş Videosu (İngilizce) → 🤖 AI Pipeline → 📹 Çıktı Videosu (Fransızca, klonlanmış ses & senkronize dudaklar)
 ```
 
-**The full pipeline includes:**
-1. **Vocal Separation** — Isolates speech from music/sound effects
-2. **Transcription** — Converts speech to text with word-level precision
-3. **Translation** — Translates text using local LLMs or Google Translate
-4. **Voice Cloning** — Regenerates speech in the target language with the original speaker's voice
-5. **Lip-Sync** — Adjusts mouth movements to match the new audio
-6. **Visual Text Translation** — Detects and replaces on-screen text (subtitles, signs, etc.)
-7. **Audio Enhancement** — Cleans and restores generated speech for broadcast quality
+**Tam pipeline şunları içerir:**
+1. **Vokal Ayrımı** — Müzik/ses efektlerinden konuşmayı ayırır
+2. **Transkripsiyon** — Konuşmayı kelime seviyesinde metne dönüştürür
+3. **Çeviri** — Metni yerel LLM'ler veya Google Translate ile çevirir
+4. **Ses Klonlama** — Hedef dilde konuşmayı orijinal konuşmacının sesine benzer şekilde yeniden üretir
+5. **Dudak Senkronizasyonu** — Ağız hareketlerini yeni sesle eşleştirir
+6. **Görsel Metin Çevirisi** — Ekrandaki metni (altyazılar, tabelalar vb.) tespit edip değiştirir
+7. **Ses Geliştirme** — Üretilen konuşmayı yayın kalitesine uygun şekilde temizler ve iyileştirir
 
 ---
 
-## 🚀 Key Features
+## 🚀 Temel Özellikler
 
-### Audio Intelligence
-| Feature | Technology | Description |
+### Ses Zekası
+| Özellik | Teknoloji | Açıklama |
 |---------|------------|-------------|
-| **Vocal Separation** | HDemucs (Meta) | Cleanly separates speech from background music/sfx with GPU chunking for long videos |
-| **Transcription** | Faster-Whisper (Large v3 Turbo) | 30-50% faster with Silero VAD preprocessing and word-level confidence filtering |
-| **Speaker Diarization** | NeMo MSDD / SpeechBrain | Identifies individual speakers for multi-voice dubbing |
-| **EQ Spectral Matching** | Custom | Applies original voice tonal characteristics to TTS output |
-| **Voice Enhancement** | VoiceFixer | Restores degraded speech and removes noise (optional) |
+| **Vokal Ayrımı** | HDemucs (Meta) | Arka plan müziği / ses efektlerinden konuşmayı temiz şekilde ayırır; uzun videolar için GPU parçalama kullanır |
+| **Transkripsiyon** | Faster-Whisper (Large v3 Turbo) | Silero VAD ön işleme ve kelime düzeyinde güven filtresiyle %30-50 daha hızlı |
+| **Konuşmacı Diyarizasyonu** | NeMo MSDD / SpeechBrain | Çok sesli dublaj için bireysel konuşmacıları tanımlar |
+| **EQ Spektral Eşleme** | Özel | TTS çıktısına orijinal sesin ton özelliklerini uygular |
+| **Ses Geliştirme** | VoiceFixer | Bozulmuş konuşmayı iyileştirir ve gürültüyü kaldırır (isteğe bağlı) |
 
-### Translation Engine
-| Model | Type | Best For |
+### Çeviri Motoru
+| Model | Tür | En Uygun Durum |
 |-------|------|----------|
-| **Google Translate** | Online | Fast, reliable everyday translation |
-| **Tencent HY-MT1.5** | Local (1.8B) | Better context preservation |
-| **Llama 3.1 8B Instruct** | Local | Nuanced, human-like translations |
-| **ALMA-R 7B** | Local | State-of-the-art translation quality |
+| **Google Translate** | Çevrimiçi | Hızlı, güvenilir günlük çeviri |
+| **Tencent HY-MT1.5** | Yerel (1.8B) | Daha iyi bağlam korunumu |
+| **Llama 3.1 8B Instruct** | Yerel | Daha nüanslı, insan gibi çeviriler |
+| **ALMA-R 7B** | Yerel | En iyi çeviri kalitesi |
 
-All local models support **context-aware mode** using full-transcript context for superior coherence.
+Tüm yerel modeller **bağlam farkındalığı modu** kullanır; tam transkript bağlamıyla daha iyi tutarlılık sunar.
 
-### Voice Synthesis (TTS)
-| Model | Type | Highlights |
+### Ses Sentezi (TTS)
+| Model | Tür | Öne Çıkanlar |
 |-------|------|------------|
-| **Edge-TTS** | Online | Natural Microsoft voices, zero GPU needed |
-| **Piper TTS** | Local | Robust offline neural TTS (auto-downloaded) |
-| **XTTS-v2** | Local | High-fidelity voice cloning with emotion control (Happy, Sad, Angry) |
-| **F5-TTS** | Local | Ultra-fast zero-shot voice cloning with Sway Sampling |
-| **VibeVoice** | Local | Microsoft's frontier long-form multi-speaker TTS (1.5B/7B) |
+| **Edge-TTS** | Çevrimiçi | Doğal Microsoft sesleri, GPU gerekmez |
+| **Piper TTS** | Yerel | Sağlam çevrimdışı sinirsel TTS (otomatik indirilir) |
+| **XTTS-v2** | Yerel | Duygu kontrolüyle yüksek kaliteli ses klonlama (Mutlu, Üzgün, Kızgın) |
+| **F5-TTS** | Yerel | Ultra hızlı sıfır-örnek ses klonlama (Sway Sampling) |
+| **VibeVoice** | Yerel | Microsoft'un öncü uzun-form çok konuşmacılı TTS (1.5B/7B) |
 
-### Visual Enhancements
-| Feature | Technology | Description |
+### Görsel Geliştirmeler
+| Özellik | Teknoloji | Açıklama |
 |---------|------------|-------------|
-| **Lip-Sync (Fast)** | Wav2Lip-GAN | Smooth, blended lip synchronization |
-| **Lip-Sync (HD)** | Wav2Lip + GFPGAN | Face restoration eliminates blurriness |
-| **Lip-Sync (Cinema)** | LivePortrait | State-of-the-art cinematic lip sync with natural facial animation |
-| **Visual Text Translation** | PaddleOCR / EasyOCR | Detects and replaces on-screen text with OpenCV inpainting |
+| **Dudak Senkronizasyonu (Hızlı)** | Wav2Lip-GAN | Pürüzsüz, harmanlanmış dudak senkronizasyonu |
+| **Dudak Senkronizasyonu (HD)** | Wav2Lip + GFPGAN | Yüz restorasyonu bulanıklığı ortadan kaldırır |
+| **Dudak Senkronizasyonu (Cinema)** | LivePortrait | Doğal hareketli sinematik dudak senkronizasyonu |
+| **Görsel Metin Çevirisi** | PaddleOCR / EasyOCR | OpenCV inpainting ile ekrandaki metni tespit edip değiştirir |
 
-## 🌐 Supported Languages
+## 🌐 Desteklenen Diller
 
-Video Translator supports a wide range of languages for both source and target translation.
+Video Translator, hem kaynak hem hedef çeviri için geniş bir dil yelpazesini destekler.
 
-| Language | Code |
+| Dil | Kod |
 |:---|:---:|
-| **Auto Detect** | `auto` |
-| **English** | `en` |
-| **Spanish** | `es` |
-| **French** | `fr` |
-| **German** | `de` |
-| **Italian** | `it` |
-| **Portuguese** | `pt` |
-| **Polish** | `pl` |
-| **Turkish** | `tr` |
-| **Russian** | `ru` |
-| **Dutch** | `nl` |
-| **Czech** | `cs` |
-| **Arabic** | `ar` |
-| **Chinese (Simplified)** | `zh` |
-| **Japanese** | `ja` |
-| **Korean** | `ko` |
-| **Hindi** | `hi` |
+| **Otomatik Tespit** | `auto` |
+| **İngilizce** | `en` |
+| **İspanyolca** | `es` |
+| **Fransızca** | `fr` |
+| **Almanca** | `de` |
+| **İtalyanca** | `it` |
+| **Portekizce** | `pt` |
+| **Lehçe** | `pl` |
+| **Türkçe** | `tr` |
+| **Rusça** | `ru` |
+| **Hollandaca** | `nl` |
+| **Çekçe** | `cs` |
+| **Arapça** | `ar` |
+| **Çince (Basitleştirilmiş)** | `zh` |
+| **Japonca** | `ja` |
+| **Korece** | `ko` |
+| **Hintçe** | `hi` |
 
-### Production-Ready
-- 🖥️ **Friendly Gradio UI** — Easy drag-and-drop interface
-- 🎛️ **Fine-Grained Control** — Beam size, VAD settings, voice selection, and more
-- 👤 **LivePortrait Lip-Sync** — State-of-the-art lip synchronizer with TensorRT acceleration support
-- 🖼️ **Visual Text Translation** — Detects, translates, and seamlessly replaces text in video frames (cached for speed)
-- 📝 **Auto-Generated Subtitles** — Exports `.srt` files alongside translated videos
-- 🔄 **Smart Segment Merging** — Combines choppy phrases into natural sentences
-- ⏳ **Real-time Progress & ETA** — Track detailed progress with estimated time remaining
-- 🧹 **VoiceFixer Enhancement** — Restores and cleans up generated audio for studio quality
-- ⚡ **GPU Optimized** — One-model-at-a-time policy for maximum VRAM efficiency
-- 🛡️ **Global CPU Fallback** — Automatically switches to CPU if GPU fails
-
----
-
-## 🎬 Use Cases
-
-### 🎥 YouTube & Social Media Creators
-> "I have 50 English tutorials and want to reach Spanish speakers."
-
-Upload each video, select English → Spanish, and export professional dubs with your cloned voice. No re-recording needed!
-
-### 🎓 Corporate Training & E-Learning
-> "Our compliance training is in English but we have offices in 12 countries."
-
-Batch-translate training videos while maintaining the presenter's voice for authenticity. Export with or without subtitles.
-
-### 🎞️ Film & Documentary Localization
-> "I want my indie film to premiere at international festivals."
-
-Use LivePortrait (HD) lip-sync for cinema-quality dubbing that doesn't look like a bad overdub.
-
-[LivePortrait GPU Acceleration](LivePortrait%20GPU%20Acceleration.md)
-
-### 📢 Marketing & Advertising
-> "We need our 30-second ad in French, German, and Japanese by tomorrow."
-
-Process multiple language versions simultaneously with local LLM translation for brand-appropriate messaging.
-
-### 🔐 Sensitive Content Translation
-> "Our video contains confidential product demos."
-
-Everything runs locally — no data leaves your machine. Perfect for legal teams, medical content, or proprietary information.
+### Üretim Hazır
+- 🖥️ **Kullanıcı Dostu Gradio Arayüzü** — Kolay sürükle-bırak arayüzü
+- 🎛️ **Detaylı Kontrol** — Beam boyutu, VAD ayarları, ses seçimi ve daha fazlası
+- 👤 **LivePortrait Dudak Senkronizasyonu** — TensorRT hızlandırma desteğiyle son teknoloji dudak senkronizasyonu
+- 🖼️ **Görsel Metin Çevirisi** — Video karelerinde metni tespit eder, çevirir ve sorunsuz şekilde değiştirir (hız için önbelleğe alınır)
+- 📝 **Otomatik Üretilen Altyazılar** — Çevrilmiş videolarla birlikte `.srt` dosyaları dışa aktarır
+- 🔄 **Akıllı Segment Birleştirme** — Kırık cümleleri doğal cümlelere birleştirir
+- ⏳ **Gerçek Zamanlı İlerleme & ETA** — Ayrıntılı ilerleme ve kalan süreyi takip eder
+- 🧹 **VoiceFixer Geliştirmesi** — Ses kalitesini iyileştirir ve stüdyo kalitesine getirir
+- ⚡ **GPU Optimize Edilmiş** — Maksimum VRAM verimliliği için tek model aynı anda politikası
+- 🛡️ **Global CPU Yedekleme** — GPU başarısız olursa otomatik olarak CPU'ya geçer
 
 ---
 
-## 🛠️ Prerequisites
+## 🎬 Kullanım Alanları
 
-| Requirement | Details |
+### 🎥 YouTube & Sosyal Medya Yaratıcıları
+> "50 İngilizce eğitmen videom var ve İspanyolca konuşanlara ulaşmak istiyorum."
+
+Her videoyu yükleyin, İngilizce → İspanyolca seçin ve klonlanmış sesinizle profesyonel dublajları dışa aktarın. Yeniden kaydetmeye gerek yok!
+
+### 🎓 Kurumsal Eğitim & E-Öğrenme
+> "Uyumluluk eğitimimiz İngilizce ama ofislerimiz 12 ülkede."
+
+Sunucunun sesini koruyarak eğitim videolarını çok dilli çevirin. Altyazılarla veya altyazısız dışa aktarın.
+
+### 🎞️ Film & Belgesel Yerelleştirme
+> "Kendi bağımsız filmim uluslararası festivallerde premier yapmak istiyor."
+
+Kötü bir overdub gibi görünmeyen sinema kalitesinde dublaj için LivePortrait (HD) dudak senkronizasyonunu kullanın.
+
+[LivePortrait GPU Hızlandırma](LivePortrait%20GPU%20Acceleration.md)
+
+### 📢 Pazarlama & Reklamcılık
+> "30 saniyelik reklamımızı yarın Fransızca, Almanca ve Japonca'ya çevirmemiz gerekiyor."
+
+Markaya uygun mesajlaşma için yerel LLM çevirisiyle birden fazla dil sürümünü aynı anda işleyin.
+
+### 🔐 Hassas İçerik Çevirisi
+> "Videomuz gizli ürün demo içeriyor."
+
+Her şey yerelde çalışır — veriniz bilgisayarınızdan ayrılmaz. Hukuk ekibi, tıbbi içerik veya özel bilgi için mükemmeldir.
+
+---
+
+## 🛠️ Ön Koşullar
+
+| Gereksinim | Ayrıntılar |
 |-------------|---------|
-| **Python** | 3.10+ (3.10 recommended) |
-| **PyTorch** | 2.5.1+ with CUDA 12.4+ |
-| **GPU** | NVIDIA GPU recommended (RTX 30/40/50 series supported) |
-| **VRAM** | 8GB minimum, 12GB+ recommended for HD lip-sync |
-| **FFmpeg** | Must be in system PATH |
-| **Rubberband** | Recommended for high-quality audio time-stretching |
+| **Python** | 3.10+ (3.10 önerilir) |
+| **PyTorch** | CUDA 12.4+ ile 2.5.1+ |
+| **GPU** | NVIDIA GPU önerilir (RTX 30/40/50 serisi desteklenir) |
+| **VRAM** | Minimum 8GB, HD dudak senkronizasyonu için 12GB+ önerilir |
+| **FFmpeg** | Sistem PATH içinde olmalıdır |
+| **Rubberband** | Yüksek kaliteli ses time-stretch için önerilir |
 
 <details>
-<summary><strong>📥 FFmpeg Installation</strong></summary>
+<summary><strong>📥 FFmpeg Kurulumu</strong></summary>
 
-**Windows (Option 1):**
+**Windows (Seçenek 1):**
 ```powershell
 winget install ffmpeg
-# Restart terminal after installation
+# Kurulumdan sonra terminali yeniden başlatın
 ```
 
-**Windows (Option 2 - Manual):**
-1. Download from [ffmpeg.org/download](https://ffmpeg.org/download.html) (Windows builds → gyan.dev)
-2. Extract to `C:\ffmpeg`
-3. Add `C:\ffmpeg\bin` to your system PATH
-4. Restart terminal and verify: `ffmpeg -version`
+**Windows (Seçenek 2 - Manuel):**
+1. [ffmpeg.org/download](https://ffmpeg.org/download.html) adresinden indirin (Windows build'leri → gyan.dev)
+2. `C:\ffmpeg` klasörüne çıkarın
+3. `C:\ffmpeg\bin` yolunu sistem PATH'ine ekleyin
+4. Terminali yeniden başlatın ve doğrulayın: `ffmpeg -version`
 
 **Linux:**
 ```bash
@@ -195,21 +197,21 @@ brew install ffmpeg
 </details>
 
 <details>
-<summary><strong>📥 Rubberband Installation</strong></summary>
+<summary><strong>📥 Rubberband Kurulumu</strong></summary>
 
-Download from [Rubberband Releases](https://breakfastquay.com/rubberband/). Extract and add to PATH, or place `rubberband-program.exe` in the project folder.
+[Rubberband Releases](https://breakfastquay.com/rubberband/) adresinden indirin. Çıkarıp PATH'e ekleyin veya `rubberband-program.exe` dosyasını proje klasörüne yerleştirin.
 </details>
 
 ---
 
-## 📦 Installation
+## 📦 Kurulum
 
-### 🚀 Quick Install (Recommended)
+### 🚀 Hızlı Kurulum (Önerilen)
 
-The smart installer auto-detects your platform, GPU, and CUDA version:
+Akıllı kurucu platformu, GPU'yu ve CUDA sürümünü otomatik algılar:
 
 ```bash
-# Clone the repository
+# Depoyu klonlayın
 git clone https://github.com/overcrash66/video-translator.git
 cd video-translator
 
@@ -221,10 +223,10 @@ chmod +x scripts/install.sh
 ./scripts/install.sh
 ```
 
-### 🔧 Manual Install
+### 🔧 Manuel Kurulum
 
 <details>
-<summary><strong>Windows (CUDA 12.8 — RTX 30/40/50 series)</strong></summary>
+<summary><strong>Windows (CUDA 12.8 — RTX 30/40/50 serisi)</strong></summary>
 
 ```powershell
 py -3.10 -m venv venv
@@ -245,7 +247,7 @@ pip install -r deploy/docker/requirements.docker.txt
 </details>
 
 <details>
-<summary><strong>macOS (Apple Silicon — CPU only)</strong></summary>
+<summary><strong>macOS (Apple Silicon — Sadece CPU)</strong></summary>
 
 ```bash
 python3.10 -m venv venv
@@ -255,145 +257,145 @@ pip install -r requirements.txt
 ```
 
 > [!NOTE]
-> Some GPU-accelerated features have reduced performance on Apple Silicon. Platform-specific
-> package substitutions (`paddlepaddle` for `paddlepaddle-gpu`, `onnxruntime` for `onnxruntime-gpu`)
-> are handled automatically by platform markers in the requirements files.
+> Bazı GPU hızlandırmalı özellikler Apple Silicon üzerinde daha düşük performans gösterebilir. Platforma özel
+> paket değişimi (`paddlepaddle` yerine `paddlepaddle-gpu`, `onnxruntime` yerine `onnxruntime-gpu`)
+> otomatik olarak gereksinim dosyalarındaki platform işaretleri tarafından yönetilir.
 </details>
 
 <details>
-<summary><strong>Advanced: Using pyproject.toml extras</strong></summary>
+<summary><strong>Gelişmiş: pyproject.toml extras kullanımı</strong></summary>
 
 ```bash
-# Full install with CUDA 12.4 (default):
+# CUDA 12.4 ile tam kurulum (varsayılan):
 pip install -e ".[all]"
 
-# Full install with CUDA 12.8 (RTX 50 series):
+# Tam kurulum CUDA 12.8 (RTX 50 serisi):
 pip install -e ".[all-cu128]" --extra-index-url https://download.pytorch.org/whl/cu128
 
-# CPU only:
+# Sadece CPU:
 pip install -e ".[all-cpu]"
 
-# Minimal (core + dev tools only):
+# En az (yalnızca çekirdek + geliştirme araçları):
 pip install -e ".[dev]"
 
-# Selective install (pick what you need):
+# Seçmeli kurulum (gerek duyduğunuzu seçin):
 pip install -e ".[tts,ocr,lipsync]"
 ```
 </details>
 
-### ✅ Verify Installation
+### ✅ Kurulum Doğrulama
 
 ```bash
-# Run smoke tests to validate your install
+# Kurulumunuzu doğrulamak için smoke testlerini çalıştırın
 pytest tests/test_smoke_install.py -m smoke -v
 
-# Or use the installer's verify mode
+# Veya kurucunun doğrulama modunu kullanın
 python scripts/install.py --verify
 ```
 
-### Optional Components
+### İsteğe Bağlı Bileşenler
 
-| Feature | Requirement |
+| Özellik | Gereksinim |
 |---------|-------------|
-| **NeMo Diarization** | `nemo_toolkit[asr]` |
-| **Wav2Lip** | Model file at `models/wav2lip/wav2lip_gan.pth` |
-| **F5-TTS** | `f5-tts` package (GPU recommended) |
-| **Enhanced Lip-Sync** | `gfpgan` and `basicsr` (included in requirements) |
-| **LivePortrait** | ~2GB VRAM, auto-downloads to `models/live_portrait` |
-| **Llama 3.1 / NeMo** | HuggingFace token (`HF_TOKEN` env variable) |
-| **VoiceFixer** | `pip install voicefixer>=0.1.2` (may need pip < 24.1) |
+| **NeMo Diyarizasyon** | `nemo_toolkit[asr]` |
+| **Wav2Lip** | `models/wav2lip/wav2lip_gan.pth` model dosyası |
+| **F5-TTS** | `f5-tts` paketi (GPU önerilir) |
+| **Gelişmiş Dudak Senkronizasyonu** | `gfpgan` ve `basicsr` (requirements içinde yer alır) |
+| **LivePortrait** | ~2GB VRAM, `models/live_portrait` klasörüne otomatik indirilir |
+| **Llama 3.1 / NeMo** | HuggingFace token (`HF_TOKEN` ortam değişkeni) |
+| **VoiceFixer** | `pip install voicefixer>=0.1.2` (gerekirse pip < 24.1 kullanılabilir) |
 
-### 🐳 Docker Deployment (GPU)
+### 🐳 Docker Dağıtımı (GPU)
 
-You can run the application in a Docker container with NVIDIA GPU support.
+Uygulamayı NVIDIA GPU desteğiyle bir Docker konteynerinde çalıştırabilirsiniz.
 
-**Prerequisites:**
-- **NVIDIA Driver** (compatible with CUDA 12.x)
-- **Docker Desktop** (Windows) or Docker Engine (Linux)
-- **NVIDIA Container Toolkit** (for GPU access inside Docker)
+**Önkoşullar:**
+- **NVIDIA Sürücüsü** (CUDA 12.x uyumlu)
+- **Docker Desktop** (Windows) veya Docker Engine (Linux)
+- **NVIDIA Container Toolkit** (Docker içinde GPU erişimi için)
 
-#### Build and Run (Recommended)
+#### Build ve Çalıştırma (Önerilen)
 
-1.  **Build the image** (run from the project root):
+1. **İmajı oluşturun** (proje kökünden çalıştırın):
     ```bash
     docker build -f deploy/docker/Dockerfile -t video-translator .
     ```
 
-3.  **Run the container**:
+3. **Konteyneri çalıştırın**:
     ```bash
-    # For PowerShell:
+    # PowerShell için:
     docker run --gpus all -p 7860:7860 -v ${PWD}/output:/app/output --name video-translator video-translator
 
-    # For Command Prompt (CMD):
+    # Command Prompt (CMD) için:
     docker run --gpus all -p 7860:7860 -v %cd%/output:/app/output --name video-translator video-translator
     ```
 
-    > **Note:** If you encounter a "Ports are not available" error (common on Windows with Hyper-V), try mapping to a different port like **7950**:
+    > **Not:** "Ports are not available" hatasıyla karşılaşırsanız (Windows'ta Hyper-V ile yaygındır), farklı bir ana bilgisayar portu kullanmayı deneyin, örn. **7950**:
     > ```bash
     > docker run --gpus all -p 7950:7860 -v ${PWD}/output:/app/output --name video-translator video-translator
     > ```
 
-4.  **Access the App**:
-    Open your browser to `http://localhost:7860` (or `http://localhost:7950` if you used the alternate port).
+4. **Uygulamaya Erişim**:
+    Tarayıcınızda `http://localhost:7860` adresini açın (veya alternatif port kullandıysanız `http://localhost:7950`).
 
-#### 🔧 Troubleshooting
+#### 🔧 Sorun Giderme
 
 **"Ports are not available" / "Access is denied"**
-On Windows, Hyper-V or WinNAT often reserves large ranges of ports (including 7860).
-- **Solution:** Use a different host port (like 7950 or 8080) as shown in the note above.
-- **Check reserved ranges:** Run `netsh interface ipv4 show excludedportrange protocol=tcp` to see which ports are blocked.
+Windows'ta Hyper-V veya WinNAT bazen büyük port aralıklarını rezerve eder (7860 dahil).
+- **Çözüm:** Yukarıdaki örnekte olduğu gibi farklı bir host portu kullanın (7950 veya 8080 gibi).
+- **Rezerve edilmiş aralıkları kontrol edin:** `netsh interface ipv4 show excludedportrange protocol=tcp` komutunu çalıştırıp hangi portların engellendiğini görün.
 
 ---
 
-## 🖥️ Usage
+## 🖥️ Kullanım
 
-### Quick Start
+### Hızlı Başlangıç
 
 ```bash
-# Activate environment
+# Ortamı etkinleştirin
 .\venv\Scripts\activate
 
-# Launch the application
+# Uygulamayı başlatın
 python app.py
 ```
 
-Open your browser to `http://127.0.0.1:7860`
+Tarayıcınızda `http://127.0.0.1:7860` adresini açın.
 
-### Step-by-Step Translation
+### Adım Adım Çeviri
 
-1. **Upload Video** — Drag & drop MP4, MKV, or MOV files
-2. **Select Languages** — Source (or Auto-detect) → Target
-3. **Choose Models:**
-   - **Translation**: Google (fast) / Llama 3.1 (quality) / ALMA-R (best)
-   - **TTS**: Edge (online) / F5-TTS (fast cloning) / XTTS (emotion control)
-4. **Enable Features** (optional):
-   - ✅ Speaker Diarization — Multi-speaker videos
-   - ✅ Lip-Sync — Select quality level (Fast/HD/Cinema)
-   - ✅ Visual Text Translation — Replace on-screen text
-   - ✅ Audio Enhancement — VoiceFixer post-processing
-5. **Click "Process Video"** and monitor progress
+1. **Video Yükleyin** — MP4, MKV veya MOV dosyaları sürükleyip bırakın
+2. **Dilleri Seçin** — Kaynak (veya Otomatik Tespit) → Hedef
+3. **Modelleri Seçin:**
+   - **Çeviri**: Google (hızlı) / Llama 3.1 (kalite) / ALMA-R (en iyi)
+   - **TTS**: Edge (çevrimiçi) / F5-TTS (hızlı klonlama) / XTTS (duygu kontrolü)
+4. **Özellikleri Etkinleştirin** (isteğe bağlı):
+   - ✅ Konuşmacı Diyarizasyonu — Çok konuşmacılı videolar
+   - ✅ Dudak Senkronizasyonu — Kalite seviyesi seçin (Hızlı/HD/Cinema)
+   - ✅ Görsel Metin Çevirisi — Ekrandaki metni değiştirin
+   - ✅ Ses Geliştirme — VoiceFixer sonrası işleme
+5. **"Process Video"** butonuna tıklayın ve ilerlemeyi izleyin
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ Yapılandırma
 
-### Directory Structure
+### Dizin Yapısı
 ```
 video-translator/
-├── temp/           # Intermediate files (auto-cleaned)
-├── output/         # Final translated videos
-├── models/         # Downloaded model weights
-└── .env            # Environment variables (HF_TOKEN, etc.)
+├── temp/           # Ara dosyalar (otomatik temizlenir)
+├── output/         # Son çevrilmiş videolar
+├── models/         # İndirilen model ağırlıkları
+└── .env            # Ortam değişkenleri (HF_TOKEN, vb.)
 ```
 
-### Environment Variables
+### Ortam Değişkenleri
 ```env
-HF_TOKEN=your_huggingface_token  # Required for Llama 3.1, NeMo
+HF_TOKEN=your_huggingface_token  # Gerekli: Llama 3.1, NeMo
 ```
 
 ---
 
-## 🧩 Pipeline Architecture
+## 🧩 Pipeline Mimarisi
 
 ```mermaid
 flowchart TD
@@ -441,19 +443,19 @@ flowchart TD
 
 ---
 
-## 🤝 Contributing
+## 🤝 Katkıda Bulunma
 
-Contributions are welcome! Areas where help is appreciated:
-- Additional language support and voice models
-- Performance optimizations
-- Bug fixes and stability improvements
-- Documentation and tutorials
+Katkılar memnuniyetle karşılanır. Yardıma ihtiyaç duyulan alanlar:
+- Ek dil desteği ve ses modelleri
+- Performans optimizasyonları
+- Hata düzeltmeleri ve kararlılık iyileştirmeleri
+- Dokümantasyon ve eğitimler
 
 ---
 
-## 🏷️ Citation
+## 🏷️ Atıf
 
-If you find this project useful, please cite it as follows:
+Projeden faydalandıysanız, lütfen aşağıdaki şekilde atıf yapın:
 
 ```bibtex
 @software{video_translator,
@@ -468,16 +470,16 @@ If you find this project useful, please cite it as follows:
 
 ---
 
-## 📄 License
+## 📄 Lisans
 
-This project is for educational and personal use. Please respect the licenses of underlying models and technologies.
+Bu proje eğitim ve kişisel kullanım içindir. Altta yatan modellerin ve teknolojilerin lisanslarına saygı gösterin.
 
 ---
 
 <div align="center">
 
-**🌟 Star this repo if you find it useful! 🌟**
+**🌟 Bu depoyu faydalı bulursanız yıldız verin! 🌟**
 
-*Made with ❤️ for content creators worldwide*
+*Dünya çapında içerik yaratıcıları için ❤️ ile yapıldı*
 
 </div>
